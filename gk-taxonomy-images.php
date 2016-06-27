@@ -35,8 +35,8 @@ if(is_admin()) {
 	// Class with all plugin functionality
 	class GK_Taxonomy_Images { 
 		// Code used to load JS and CSS in the back-end
-		static function load_scripts($hook) {
-			if($hook != 'edit-tags.php') {
+		static function load_scripts($hook) {			
+			if($hook != 'term.php') {
 				return;
 			}
 		 
@@ -68,7 +68,7 @@ if(is_admin()) {
 		            </div>
 
 		            <input type="hidden" name="gk_taxonomy_images_id" value="<?php echo $tag->term_id; ?>" />
-		            <p class="description"><?php _e('Select an image which will be displayed in the taxonomy page for this term.', 'gk-taxonomy-images'); ?></[>
+		            <p class="description"><?php _e('Select an image which will be displayed in the taxonomy page for this term.', 'gk-taxonomy-images'); ?></p>
 		        </td>
 		    </tr>
 		    <?php
